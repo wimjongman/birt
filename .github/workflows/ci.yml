@@ -78,14 +78,6 @@ jobs:
           }
 
     # Upload each output as its own artifact (so they appear individually in the UI)
-    - name: Upload birt-charts
-      uses: actions/upload-artifact@v4
-      with:
-        name: birt-charts
-        if-no-files-found: error
-        compression-level: 0
-        path: build/birt-packages/birt-charts/target/birt-charts-*.zip
-
     - name: Upload birt-report-designer linux aarch64
       uses: actions/upload-artifact@v4
       with:
